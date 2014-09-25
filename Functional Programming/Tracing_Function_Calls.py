@@ -1,3 +1,5 @@
+# coding=utf-8
+
 """
 Problem
 
@@ -41,4 +43,4 @@ def memoize(f):
 	return g
 
 fib = memoize(fib)
-print fib(4)
+print fib(5), fib(4), fib(3)

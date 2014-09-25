@@ -1,9 +1,8 @@
 # coding=utf-8
 
-
 """
-
 Problem
+
 
 You need to perform calculations on large numerical datasets, such as arrays or grids.
 Solution
