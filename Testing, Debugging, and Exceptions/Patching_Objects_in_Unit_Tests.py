@@ -123,7 +123,7 @@ True
 """
 Typically, these kinds of operations are carried out in a unit test. 
 For example, suppose you have some function like this:
-"""
+
 # example.py
 from urllib.request import urlopen
 import csv
@@ -134,12 +134,13 @@ def dowprices():
     rows = (row for row in csv.reader(lines) if len(row) == 2)
     prices = { name.float(price) for name, price in rows }
     return prices
+"""
 
 """
 Normally, this function uses urlopen() to go fetch data off the Web and parse it. 
 To unit test it, you might want to give it a more predictable dataset of your own creation, 
 however. Here’s an example using patching:
-"""
+
 import unittest
 from unittest.mock import patch
 import io
@@ -164,6 +165,7 @@ class Tests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+"""
 
 """
 In this example, the urlopen() function in the example module is replaced with a mock object 
